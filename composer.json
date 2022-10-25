@@ -1,0 +1,16 @@
+{
+    "name": "aluno/vidaleve",
+    "description": "Projeto Vida Leve",
+    "authors": [
+        {
+            "name": "unifeob"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "classes/",
+            "Model\\": "model/"
+        }
+    },
+    "require": {}
+}
