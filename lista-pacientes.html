@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <!-- Title -->
+    <title>Lista de Pacientes</title>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div>
+          <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo">
+            <p>Vida Leve</p>
+          </div>
+          <div class="nav-links">
+            <ul>
+              <li>
+                <a href="#">Voltar página inicial</a>
+              </li>
+              <li>
+                <a href="#">Baixar dados</a>
+              </li>
+              <li>
+                <a href="#">Ajuda</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="user">
+          <h3>Sara Vila Nova</h3>
+          <span>S</span>
+        </div>
+      </div>
+    </header>
+    <main class="main-lista-patients general">
+      <div class="container">
+        <aside>
+          <div class="user">
+            <img src="assets/images/user.png" alt="User">
+            <div class="info">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Informações</span>
+            </div>
+            <p>Leticia Vieira</p>
+          </div>
+
+          <div class="links">
+            <ul>
+              <li>
+                <span>Exames</span>
+              </li>
+              <li>
+                <span>Anaminese</span>
+                <div class="submenu">
+                  <ul>
+                    <li></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span>Evolução</span>
+              </li>
+              <li>
+                <span>Pacientes</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="content">
+          <form action="#" class="search-patient">
+            <div class="input">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" name="search" id="search" placeholder="Pesquisar nome do paciente" autocomplete="off">
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+
+          <div class="patient-list">
+            <h1>Lista de pacientes</h1>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome completo</th>
+                  <th>Frequência</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Beatriz Nogueira</td>
+                  <td>Presente</td>
+                  <td>4504245</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/c9dce17fd3.js" crossorigin="anonymous"></script>
+  </body>
+</html>
