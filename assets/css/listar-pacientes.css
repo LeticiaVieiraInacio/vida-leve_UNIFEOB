@@ -1,0 +1,87 @@
+/* Lista Pacientes */
+
+.main-lista-patients .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-lista-patients .search-patient {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-patient .input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.search-patient .input i {
+    font-size: 1.6rem;
+    border-right: 1px solid #ccc;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    cursor: pointer;
+    background-color: rgb(247, 247, 247);
+
+}
+
+.search-patient .input input {
+    width: 550px;
+    height: 45px;
+    padding-left: 15px;
+    outline: 0;
+    font-size: 1.6rem;
+    border: none;
+}
+
+.search-patient .input button {
+    height: 45px;
+    padding: 0 2rem;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    background-color: var(--blue-primary);
+    color: #fff;
+    font-weight: bold;
+}
+
+.patient-list {
+    margin-top: 5rem;
+}
+
+.patient-list h1 {
+    background-color: #8EDF9B;
+    font-weight: normal;
+    width: 689.75px;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.patient-list table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+.patient-list table td,
+.patient-list table th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.patient-list table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+@media screen and (max-width: 1440px) {
+    
+}
