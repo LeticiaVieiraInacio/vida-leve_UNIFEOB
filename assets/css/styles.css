@@ -94,6 +94,7 @@ html {
 
 .navbar .user h3 {
   color: #fff;
+  font-weight: normal;
 }
 
 .navbar .user span {
@@ -106,7 +107,6 @@ html {
   background-color: #06E1EF;
   border-radius: 50%;
   color: #fff;
-  font-weight: bold;
 }
 
 aside {
@@ -167,7 +167,7 @@ aside .links > ul > li {
 
 aside .links ul li span {
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
 }
 

@@ -4,8 +4,10 @@ namespace Model;
 use Classes\Database;
 use PDO;
 
-class Patient extends Database {
-    public function fetchAll() {
+class Patient extends Database
+{
+    public function fetchAll()
+    {
         try {
             $this->setSql("SELECT * FROM pacientes");
 

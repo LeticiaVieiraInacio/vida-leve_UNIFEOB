@@ -4,8 +4,10 @@ namespace Model;
 use Classes\Database;
 use PDO;
 
-class User extends Database {
-    public function login($email, $password) {
+class User extends Database
+{
+    public function login($email, $password)
+    {
         try {
             $this->setSql("SELECT * FROM usuarios WHERE email = ? AND senha = ?");
 

@@ -35,7 +35,7 @@ if (isset($_POST['submit']) && isset($_POST['email']) && isset($_POST['senha']))
             </div>
             <div class="input">
                 <label for="password">Senha</label>
-                <input type="text" name="senha" id="password" placeholder="Digite sua senha">
+                <input type="password" name="senha" id="password" placeholder="Digite sua senha">
             </div>
             </div>
             <button type="submit" name="submit">

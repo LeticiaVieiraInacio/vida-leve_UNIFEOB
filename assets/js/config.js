@@ -1,0 +1,1 @@
+const Uri = 'http://localhost/vidaleve/'

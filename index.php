@@ -23,12 +23,19 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/listar-pacientes.css">
+    <link rel="stylesheet" href="assets/css/anamnese-geral.css">
     <link rel="stylesheet" href="assets/css/login.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script src="assets/js/config.js" type="text/javascript"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
 </head>
 
 <body>
