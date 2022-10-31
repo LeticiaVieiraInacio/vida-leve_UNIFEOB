@@ -7,6 +7,7 @@
 :root {
   --blue-primary: #0083D5;
   --blue-dark: #0163a0;
+  --green-primary: #8EDF9B;
 }
 
 html {
@@ -165,10 +166,11 @@ aside .links > ul > li {
   cursor: pointer;
 }
 
-aside .links ul li span {
+aside .links ul li a {
   font-size: 1.6rem;
   font-weight: normal;
   color: #fff;
+  text-decoration: none;
 }
 
 aside .links ul li .submenu ul {

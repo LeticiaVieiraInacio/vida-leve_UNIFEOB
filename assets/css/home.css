@@ -1,0 +1,20 @@
+.main-home {
+  background-color: var(--green-primary);
+  min-height: calc(100vh - 70px);
+}
+
+.main-home .people {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.main-home h3 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: underline;
+  background-color: var(--blue-primary);
+}

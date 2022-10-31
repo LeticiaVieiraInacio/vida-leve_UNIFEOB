@@ -3,6 +3,10 @@ require_once("vendor/autoload.php");
 
 session_start();
 
+if (!isset($_SESSION['user']) && !($_GET['page'] === "login")) {
+  header("Location: ?page=login");
+}
+
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 $action = isset($_GET['action']) ? $_GET['action'] : 'main';
 ?>
@@ -13,7 +17,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
 
 <head>
     <!-- Title -->
-    <title>Login</title>
+    <title>Vida Leve - Unifeob</title>
 
     <!-- Meta Tags -->
     <meta charset="UTF-8">
@@ -23,7 +27,9 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/listar-pacientes.css">
+    <link rel="stylesheet" href="assets/css/cadastrar-paciente.css">
     <link rel="stylesheet" href="assets/css/anamnese-geral.css">
+    <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/login.css">
 
     <!-- Fonts -->

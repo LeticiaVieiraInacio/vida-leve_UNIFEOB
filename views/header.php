@@ -8,20 +8,23 @@
             <div class="nav-links">
             <ul>
                 <li>
-                <a href="#">Voltar página inicial</a>
+                    <a href="?page=home">Página Inicial</a>
                 </li>
                 <li>
-                <a href="#">Baixar dados</a>
+                    <a href="?page=listar-pacientes">Listar Pacientes</a>
                 </li>
                 <li>
-                <a href="#">Ajuda</a>
+                    <a href="?page=cadastrar-paciente">Cadastrar Paciente</a>
+                </li>
+                <li>
+                    <a href="#">Ajuda</a>
                 </li>
             </ul>
             </div>
         </div>
         <div class="user">
-            <h3>Sara Vila Nova</h3>
-            <span>S</span>
+            <h3><?= $_SESSION['user']['nome']; ?></h3>
+            <span><?= substr($_SESSION['user']['nome'], 0, 1); ?></span>
         </div>
     </div>
 </header>

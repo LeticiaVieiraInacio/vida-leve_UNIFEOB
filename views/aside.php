@@ -1,3 +1,13 @@
+<?php
+
+use Model\Patient;
+
+if (isset($_GET['id'])) {
+    $patient = new Patient();
+    $patientData = $patient->fetch($_GET['id']);
+?>
+
+
 <aside>
     <div class="user">
         <img src="assets/images/user.png" alt="User">
@@ -5,28 +15,25 @@
             <i class="fa-solid fa-circle-info"></i>
             <span>Informações</span>
         </div>
-        <p>Leticia Vieira</p>
+        <p><?= $patientData['nome']; ?></p>
     </div>
 
     <div class="links">
         <ul>
             <li>
-                <span>Exames</span>
+                <a href="?page=patient&action=exames&id=<?= $_GET['id']; ?>">Exames</a>
             </li>
             <li>
-                <span>Anaminese</span>
-                <div class="submenu">
-                    <ul>
-                        <li></li>
-                    </ul>
-                </div>
+                <a href="?page=patient&action=anamneses&id=<?= $_GET['id']; ?>">Anamneses</a>
             </li>
             <li>
-                <span>Evolução</span>
+                <a href="?page=patient&action=evolucao&id=<?= $_GET['id']; ?>">Evolução</a>
             </li>
             <li>
-                <span>Pacientes</span>
+                <a href="?page=patient&action=pacientes&id=<?= $_GET['id']; ?>">Pacientes</a>
             </li>
         </ul>
     </div>
 </aside>
+
+<?php } ?>
