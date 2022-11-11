@@ -1,28 +1,28 @@
 <?php
-use Model\Patient;
+use Model\Paciente;
 use Model\User;
 
-$patient = new Patient();
+$paciente = new Paciente();
 $user = new User();
 
-$exames = $patient->exames($_GET['id']);
+$exames = $paciente->exames($_GET['id']);
 ?>
 
-<main class="main-lista-patients general">
+<main class="main-lista-pacientes general">
     <div class="container">
         <?php require_once(__DIR__ . '/../aside.php'); ?>
 
         <div class="content">
-            <form action="#" class="search-patient">
+            <form action="#" class="search-paciente">
             <div class="input">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" name="search" id="search" placeholder="Pesquisar nome do paciente" autocomplete="off">
+                <input type="search" name="search" id="search" placeholder="Pesquisar nome do exame" autocomplete="off">
                 <button type="submit">Enviar</button>
             </div>
             </form>
 
-            <div class="patient-list">
-            <h1>Lista de anamneses</h1>
+            <div class="paciente-list">
+            <h1>Lista de exames</h1>
 
             <table>
                 <thead>
@@ -30,6 +30,7 @@ $exames = $patient->exames($_GET['id']);
                     <th>Médico</th>
                     <th>Nome do Exame</th>
                     <th>Data do exame</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -38,6 +39,7 @@ $exames = $patient->exames($_GET['id']);
                             <td><?= $medico['nome']; ?></td>
                             <td><?= $exame['nome'] ?></td>
                             <td><?= $exame['criado_em'] ?></td>
+                            <td><a href="#">Download do anexo</a></td>
                         </tr>
                     <?php endforeach; ?>
 

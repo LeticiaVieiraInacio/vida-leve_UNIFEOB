@@ -1,15 +1,15 @@
 <?php
-use Model\Patient;
+use Model\Paciente;
 
-$patient = new Patient();
+$paciente = new Paciente();
 
-$patients = $patient->fetchAll();
+$pacientes = $paciente->fetchAll();
 ?>
 
-<main class="main-lista-patients general">
+<main class="main-lista-pacientes general">
     <div class="container">
         <div class="content">
-            <form action="#" class="search-patient">
+            <form action="#" class="search-paciente">
             <div class="input">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="search" name="search" id="search" placeholder="Pesquisar nome do paciente" autocomplete="off">
@@ -17,7 +17,7 @@ $patients = $patient->fetchAll();
             </div>
             </form>
 
-            <div class="patient-list">
+            <div class="paciente-list">
             <h1>Lista de pacientes</h1>
 
             <table>
@@ -30,20 +30,20 @@ $patients = $patient->fetchAll();
                 </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($patients as $patientData): ?>
+                    <?php foreach($pacientes as $pacienteData): ?>
                         <tr>
-                            <td><?= $patientData['nome'] ?></td>
+                            <td><?= $pacienteData['nome'] ?></td>
                             <td>Presente</td>
-                            <td><?= $patientData['id'] ?></td>
+                            <td><?= $pacienteData['id'] ?></td>
                             <td>
-                                <a href="?page=patient&id=<?= $patientData['id'] ?>">Visualizar</a>
+                                <a href="?page=paciente&action=exames&id=<?= $pacienteData['id'] ?>">Visualizar</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
 
                 </tbody>
             </table>
-            <?php if (!count($patients)): ?>
+            <?php if (!count($pacientes)): ?>
                <h2 style="text-align: center; margin: 1rem; font-weight: normal;">Não há pacientes cadastrados.</h2>
             <?php endif; ?>
             </div>

@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--blue-primary);
+    background-image: linear-gradient(45deg, #3d3294, transparent);
 }
 
 .login-card {
@@ -13,20 +14,36 @@
     flex-direction: column;
     padding: 5rem 15rem;
     background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 2px 0.5rem rgba(0, 0, 0, 0.3);
 }
 
-.login-card>h2 {
-    margin: 0 auto 2rem;
-    font-size: 1.6rem;
+.login-card > h2 {
+    margin: 3rem  auto 2rem;
+    font-size: 1.8rem;
+    font-weight: normal;
 }
 
 .login-card .logo {
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 50%;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.3);
+    width: 290px;
+    height: 290px;
+}
+
+.login-card .logo h3 {
+    font-size: 3rem;
+    font-weight: normal;
 }
 
 .login-card .logo img {
     display: flex;
-    width: 300px;
+    width: 100px;
 }
 
 .login-card .fields {
@@ -59,8 +76,8 @@
     align-items: center;
     justify-content: center;
     width: 200px;
-    height: 45px;
-    margin: 2rem auto 0;
+    height: 50px;
+    margin: 3rem auto 0;
     background-color: var(--blue-primary);
     color: #fff;
     border: none;
@@ -68,6 +85,7 @@
     transition: 0.3s ease all;
     text-decoration: none;
     font-size: 1.6rem;
+    border-radius: 3px;
 }
 
 .login-card button span {
@@ -79,10 +97,11 @@
 }
 
 .login-card>span {
-    margin: 2rem auto 0;
+    margin: 1rem auto 0;
     color: var(--blue-primary);
     cursor: pointer;
     font-size: 1.5rem;
+    text-decoration: underline;
 }
 
 .login-card span:hover {

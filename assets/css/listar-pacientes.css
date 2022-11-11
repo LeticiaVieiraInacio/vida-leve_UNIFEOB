@@ -1,25 +1,25 @@
 /* Lista Pacientes */
 
-.main-lista-patients .content {
+.main-lista-pacientes .content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main-lista-patients .search-patient {
+.main-lista-pacientes .search-paciente {
     margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.search-patient .input {
+.search-paciente .input {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
 }
 
-.search-patient .input i {
+.search-paciente .input i {
     font-size: 1.6rem;
     border-right: 1px solid #ccc;
     height: 45px;
@@ -32,7 +32,7 @@
 
 }
 
-.search-patient .input input {
+.search-paciente .input input {
     width: 550px;
     height: 45px;
     padding-left: 15px;
@@ -41,7 +41,7 @@
     border: none;
 }
 
-.search-patient .input button {
+.search-paciente .input button {
     height: 45px;
     padding: 0 2rem;
     outline: 0;
@@ -52,11 +52,11 @@
     font-weight: bold;
 }
 
-.patient-list {
+.paciente-list {
     margin-top: 5rem;
 }
 
-.patient-list h1 {
+.paciente-list h1 {
     background-color: #8EDF9B;
     font-weight: normal;
     width: 689.75px;
@@ -64,21 +64,21 @@
     padding: 0.5rem 0;
 }
 
-.patient-list table {
+.paciente-list table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     font-size: 1.6rem;
 }
 
-.patient-list table td,
-.patient-list table th {
+.paciente-list table td,
+.paciente-list table th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
 
-.patient-list table tr:nth-child(even) {
+.paciente-list table tr:nth-child(even) {
     background-color: #dddddd;
 }
 

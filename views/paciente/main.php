@@ -1,12 +1,12 @@
 <?php
-use Model\Patient;
+use Model\Paciente;
 
-$patient = new Patient();
+$paciente = new Paciente();
 
-$patientData = $patient->fetch($_GET['id']);
+$pacienteData = $paciente->fetch($_GET['id']);
 ?>
 
-<main class="main-lista-patients general">
+<main class="main-lista-pacientes general">
     <div class="container">
         <?php require_once(__DIR__ . '/../aside.php'); ?>
 

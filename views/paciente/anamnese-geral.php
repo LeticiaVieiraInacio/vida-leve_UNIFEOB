@@ -1,12 +1,15 @@
 <?php
-    // if (isset($_POST)) {
-    //     echo "<pre style='font-size: 3rem'>";
-    //     print_r($_SESSION);
-    //     $_POST['nome'] = $_SESSION['nome'];
-    //     $_POST['email'] = $_SESSION['email'];
-    //     print_r($_POST);
-    //     echo "</pre>";
-    // }
+use Model\AnamneseGeral;
+
+$anamneseGeral = new AnamneseGeral;
+
+if (count($_POST)) {
+  $_POST['id_paciente'] = $_GET['id'];
+
+  if ($anamneseGeral->create($_POST)) {
+    header("Location: ?page=paciente&action=anamneses&id={$_GET['id']}");
+  }
+}
 ?>
 
 
@@ -25,7 +28,7 @@
                 </button>
             </div>
 
-            <form id="anamnese-geral" action="#" method="POST" class="forms">
+            <form id="anamnese-geral" action="?<?= $_SERVER['QUERY_STRING'] ?>" method="POST" class="forms">
                 <section class="information">
                     <fieldset>
                         <h3>Dados pessoais</h3>
@@ -39,8 +42,8 @@
                                 <input type="text" name="cor" id="email" placeholder="Digite sua resposta...">
                             </div>
                             <div class="input-group">
-                                <label for="etinia">Digite a etinia:</label>
-                                <input type="text" name="etinia" id="etinia" placeholder="Digite sua resposta...">
+                                <label for="etnia">Digite a etnia:</label>
+                                <input type="text" name="etnia" id="etnia" placeholder="Digite sua resposta...">
                             </div>
                             <div class="input-group">
                                 <label for="religiao">Digite a religião:</label>

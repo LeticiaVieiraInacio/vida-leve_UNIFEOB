@@ -1,23 +1,27 @@
 <?php
 
-use Model\Patient;
+use Model\Paciente;
 
-$patient = new Patient();
+$paciente = new Paciente();
 
 if (isset($_POST['submit']) && isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['idade'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $idade = $_POST['idade'];
+    $genero = $_POST['genero'];
+    $foto = $_POST['foto'];
+    $cpf = $_POST['cpf'];
 
     $user = [
         'nome' => $nome,
         'email' => $email,
-        'idade' => $idade
+        'idade' => $idade,
+        'genero' => $genero,
+        'foto' => $foto,
+        'cpf' => $cpf
     ];
 
-    print_r($user['nome']);
-    
-    if ($patient->create($user)) {
+    if ($paciente->create($user)) {
         header("Location: ?page=listar-pacientes");
     }
 }
@@ -27,7 +31,7 @@ if (isset($_POST['submit']) && isset($_POST['nome']) && isset($_POST['email']) &
     <div class="container">
         <div class="content">
             <h1>Cadastro de pacientes</h1>
-            <form action="#" class="create-patient" method="POST">
+            <form action="#" class="create-paciente" method="POST">
                 <div class="input-group">
                     <label for="nome">Nome do paciente:</label>
                     <input type="text" name="nome" id="nome" placeholder="Digite o nome do paciente">
@@ -41,6 +45,10 @@ if (isset($_POST['submit']) && isset($_POST['nome']) && isset($_POST['email']) &
                     <input type="text" name="idade" id="idade" placeholder="Digite a idade do paciente">
                 </div>
                 <div class="input-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF do paciente">
+                </div>
+                <div class="input-group">
                     <label for="genero">Gênero:</label>
                     <select name="genero" id="genero">
                         <option disabled>Escolha um gênero</option>
@@ -50,8 +58,8 @@ if (isset($_POST['submit']) && isset($_POST['nome']) && isset($_POST['email']) &
                     </select>
                 </div>
                 <div class="input-group">
-                    <label for="foto">Foto de perfil:</label>
-                    <input type="file" name="foto" id="foto">
+                    <label for="foto">Foto de perfil</label>
+                    <input type="text" name="foto" id="foto" placeholder="URL da foto">
                 </div>
 
                 <button type="submit" name="submit">Cadastrar</button>
