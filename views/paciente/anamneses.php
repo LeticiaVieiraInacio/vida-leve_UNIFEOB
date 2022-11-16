@@ -37,9 +37,9 @@ $exames = $paciente->exames($_GET['id']);
                     <?php foreach($exames as $exame): $medico = $user->fetch($_GET['id']); ?>
                         <tr>
                             <td><?= $medico['nome']; ?></td>
-                            <td><?= $exame['nome'] ?></td>
+                            <td>Anamnese Geral</td>
                             <td><?= $exame['criado_em'] ?></td>
-                            <td><a href="#">Editar</a></td>
+                            <td><a href="#">Visualizar</a></td>
                         </tr>
                     <?php endforeach; ?>
 

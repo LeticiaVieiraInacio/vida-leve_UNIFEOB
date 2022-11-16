@@ -35,19 +35,19 @@ if (isset($_GET['id'])) {
                                 <a href="?page=paciente&action=anamnese-geral&id=<?= $_GET['id'] ?>">Anamnese Geral</a>
                             </li>
                             <li>
-                                <a href="?page=paciente&action=anamnese-geral&id=<?= $_GET['id'] ?>">Enfermagem</a>
+                                <a href="?page=paciente&action=enfermagem&id=<?= $_GET['id'] ?>">Enfermagem</a>
                             </li>
                             <li>
-                                <a href="?page=paciente&action=anamnese-geral&id=<?= $_GET['id'] ?>">Farmácia</a>
+                                <a href="?page=paciente&action=farmacia&id=<?= $_GET['id'] ?>">Farmácia</a>
                             </li>
                             <li>
-                                <a href="?page=paciente&action=anamnese-geral&id=<?= $_GET['id'] ?>">Educação Física</a>
+                                <a href="?page=paciente&action=educacao-fisica&id=<?= $_GET['id'] ?>">Educação Física</a>
                             </li>
                             <li>
-                                <a href="?page=paciente&action=anamnese-geral&id=<?= $_GET['id'] ?>">Nutrição</a>
+                                <a href="?page=paciente&action=nutricao&id=<?= $_GET['id'] ?>">Nutrição</a>
                             </li>
                             <li>
-                                <a href="?page=paciente&action=anamnese-geral&id=<?= $_GET['id'] ?>">Psicologia</a>
+                                <a href="?page=paciente&action=psicologia&id=<?= $_GET['id'] ?>">Psicologia</a>
                             </li>
                         </ul>
                     </div>

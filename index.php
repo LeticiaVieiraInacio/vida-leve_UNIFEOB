@@ -32,6 +32,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : 'main';
       <link rel="stylesheet" href="assets/css/home.css">
       <link rel="stylesheet" href="assets/css/login.css">
       <link rel="stylesheet" href="assets/css/noticias.css">
+      <link rel="stylesheet" href="assets/css/paciente.css">
 
       <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">

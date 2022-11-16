@@ -46,6 +46,14 @@
                                 <label for="religiao">Digite a religião:</label>
                                 <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
                             </div>
+                            <div class="input-group">
+                                <label for="profissao_horario">Profissão e horário de trabalho:</label>
+                                <input type="text" name="profissao_horario" id="profissao_horario" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="profissao_horario">Naturalidade:</label>
+                                <input type="text" name="profissao_horario" id="profissao_horario" placeholder="Digite sua resposta...">
+                            </div>
                         </div>
                     </fieldset>
                 </section>
@@ -91,7 +99,7 @@
                                 <input type="text" name="trabalha_atualmente" id="trabalha_atualmente" placeholder="Digite sua resposta...">
                             </div>
                             <div class="input-group">
-                                <label for="permite_ativo">Digite se o trabalho permite ser ativo:</label>
+                                <label for="permite_ativo">O seu trabalho permite que você esteja mais ativo ou mais sedentário:</label>
                                 <input type="text" name="permite_ativo" id="permite_ativo" placeholder="Digite sua resposta...">
                             </div>
                             <div class="input-group">
@@ -101,6 +109,61 @@
                             <div class="input-group">
                                 <label for="habitos">Digite os habitos:</label>
                                 <input type="text" name="habitos" id="habitos" placeholder="Digite sua resposta...">
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+                <section class="information">
+                    <fieldset>
+                        <h3>Informações</h3>
+                        <div class="input-forms">
+                            <div class="input-group">
+                                <label for="etinia">Frequência Cardíaca:</label>
+                                <input type="text" name="etinia" id="etinia" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="religiao">Glicemia Capilar:</label>
+                                <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="religiao">Pulso:</label>
+                                <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="religiao">Temperatura:</label>
+                                <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="religiao">Saturação:</label>
+                                <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="religiao">Frequência Respiratória:</label>
+                                <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="religiao">Possui alguma dor? Quais?:</label>
+                                <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
+                            </div>
+                            <div class="input-group">
+                                <label for="religiao">Queixa principal:</label>
+                                <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
+                            </div>
+                        </div>
+                    </fieldset>
+                </section>
+                <section class="information">
+                    <fieldset>
+                        <h3>Comorbidades / Patologia de base</h3>
+                        <div class="input-forms">
+                            <div>
+                                <input type="checkbox" id="scales" name="scales" checked>
+                                <label for="scales">Scales</label>
+                            </div>
+
+                            <div>
+                                <input type="checkbox" id="horns" name="horns">
+                                <label for="horns">Horns</label>
                             </div>
                         </div>
                     </fieldset>

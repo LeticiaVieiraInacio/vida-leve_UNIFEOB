@@ -45,6 +45,10 @@ if (isset($_POST['submit']) && isset($_POST['nome']) && isset($_POST['email']) &
                     <input type="text" name="idade" id="idade" placeholder="Digite a idade do paciente">
                 </div>
                 <div class="input-group">
+                    <label for="data_nascimento">Data de nascimento:</label>
+                    <input type="date" name="data_nascimento" id="data_nascimento">
+                </div>
+                <div class="input-group">
                     <label for="cpf">CPF:</label>
                     <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF do paciente">
                 </div>
@@ -57,9 +61,15 @@ if (isset($_POST['submit']) && isset($_POST['nome']) && isset($_POST['email']) &
                         <option value="">Prefiro não dizer</option>
                     </select>
                 </div>
-                <div class="input-group">
+                <div class="input-group" >
                     <label for="foto">Foto de perfil</label>
-                    <input type="text" name="foto" id="foto" placeholder="URL da foto">
+                    <div style="display: flex; align-items: center; gap: 1rem; ">
+                        <input type="file" name="foto" id="foto" style="position: relative; top: 10px">
+                        
+                        <p style="text-align: center; font-size: 1.5rem">ou</p>
+                        
+                        <input type="text" name="foto" id="foto" placeholder="URL da foto">
+                    </div>
                 </div>
 
                 <button type="submit" name="submit">Cadastrar</button>

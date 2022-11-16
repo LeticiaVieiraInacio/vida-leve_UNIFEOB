@@ -38,9 +38,9 @@ CREATE TABLE IF NOT EXISTS `anamnese_geral` (
   PRIMARY KEY (`id`),
   KEY `FK_anamnese_geral_pacientes` (`id_paciente`),
   CONSTRAINT `FK_anamnese_geral_pacientes` FOREIGN KEY (`id_paciente`) REFERENCES `pacientes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela vidaleve.anamnese_geral: ~25 rows (aproximadamente)
+-- Copiando dados para a tabela vidaleve.anamnese_geral: ~27 rows (aproximadamente)
 /*!40000 ALTER TABLE `anamnese_geral` DISABLE KEYS */;
 INSERT INTO `anamnese_geral` (`id`, `id_paciente`, `estado_civil`, `cor`, `etnia`, `religiao`, `endereco`, `bairro`, `cidade`, `telefone_residencial`, `telefone_celular`, `escolaridade`, `trabalha_atualmente`, `permite_ativo`, `renda_familiar`, `habitos`, `criado_em`) VALUES
 	(1, 1, 'eae', '', '', '', '', '', '', '', '', '', '', '', '', '', '2022-11-10 16:02:35');
@@ -92,6 +92,10 @@ INSERT INTO `anamnese_geral` (`id`, `id_paciente`, `estado_civil`, `cor`, `etnia
 	(24, 1, 'eaea', 'eaeaea', 'eaea', 'eaea', 'eqaea', 'eae', 'aeea', 'eae', 'eaea', 'eae', 'eae', 'aea', 'ea', 'eaqea', '2022-11-11 19:16:26');
 INSERT INTO `anamnese_geral` (`id`, `id_paciente`, `estado_civil`, `cor`, `etnia`, `religiao`, `endereco`, `bairro`, `cidade`, `telefone_residencial`, `telefone_celular`, `escolaridade`, `trabalha_atualmente`, `permite_ativo`, `renda_familiar`, `habitos`, `criado_em`) VALUES
 	(25, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2022-11-11 19:16:47');
+INSERT INTO `anamnese_geral` (`id`, `id_paciente`, `estado_civil`, `cor`, `etnia`, `religiao`, `endereco`, `bairro`, `cidade`, `telefone_residencial`, `telefone_celular`, `escolaridade`, `trabalha_atualmente`, `permite_ativo`, `renda_familiar`, `habitos`, `criado_em`) VALUES
+	(26, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2022-11-16 13:44:04');
+INSERT INTO `anamnese_geral` (`id`, `id_paciente`, `estado_civil`, `cor`, `etnia`, `religiao`, `endereco`, `bairro`, `cidade`, `telefone_residencial`, `telefone_celular`, `escolaridade`, `trabalha_atualmente`, `permite_ativo`, `renda_familiar`, `habitos`, `criado_em`) VALUES
+	(27, 1, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2022-11-16 13:44:11');
 /*!40000 ALTER TABLE `anamnese_geral` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela vidaleve.consultas
@@ -137,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `evolucao` (
   CONSTRAINT `FK__pacientes` FOREIGN KEY (`id_paciente`) REFERENCES `pacientes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela vidaleve.evolucao: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela vidaleve.evolucao: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `evolucao` DISABLE KEYS */;
 INSERT INTO `evolucao` (`id`, `id_paciente`, `alergias`, `historico_familiar`, `comentario`, `criado_em`, `atualizado_em`) VALUES
 	(1, 1, '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
@@ -161,7 +165,7 @@ CREATE TABLE IF NOT EXISTS `exames` (
 -- Copiando dados para a tabela vidaleve.exames: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `exames` DISABLE KEYS */;
 INSERT INTO `exames` (`id`, `id_paciente`, `id_usuario`, `nome`, `criado_em`, `atualizado_em`) VALUES
-	(1, 1, 1, 'Exame ', '2022-10-31 18:14:40', '2022-10-31 18:14:40');
+	(1, 1, 1, 'Exame Exemplo ', '2022-10-31 18:14:40', '2022-10-31 18:14:40');
 /*!40000 ALTER TABLE `exames` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela vidaleve.noticias
@@ -201,7 +205,7 @@ CREATE TABLE IF NOT EXISTS `pacientes` (
 -- Copiando dados para a tabela vidaleve.pacientes: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `pacientes` DISABLE KEYS */;
 INSERT INTO `pacientes` (`id`, `foto`, `nome`, `cpf`, `email`, `altura`, `peso`, `imc`, `idade`, `genero`, `criado_em`, `atualizado_em`) VALUES
-	(1, NULL, 'Emanuel Paciente', '', 'emanuel@gmail.com', 0, 0, '', 18, '', '2022-10-28 19:48:20', '2022-10-28 19:48:20');
+	(1, 'https://scontent.fcpq12-1.fna.fbcdn.net/v/t39.30808-6/296730119_1782399198773570_6213534272103476698_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeETL8dtEOZOBs8gcItGqJIfYXrN9NRk5-xhes301GTn7BcZsFocEMSP-ASk3LwehWprWDwcMjpxzRAVcNlUKUwO&_nc_ohc=an_qbdUuhoYAX9BhIEl&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fcpq12-1.fna&oh=00_AfCyso91dhL3_q2NNhk-FNKASCrjbYeop6b6s6Oux1rcyQ&oe=637B1D32', 'Leticia Vieira', '', 'leticia@gmail.com', 0, 0, '', 18, '', '2022-10-28 19:48:20', '2022-10-28 19:48:20');
 /*!40000 ALTER TABLE `pacientes` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela vidaleve.usuarios
@@ -216,10 +220,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela vidaleve.usuarios: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela vidaleve.usuarios: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
 INSERT INTO `usuarios` (`id`, `nome`, `foto`, `email`, `senha`, `atualizado_em`, `criado_em`) VALUES
-	(1, 'Emanuel Médico', '', 'emanuel@gmail.com', '123', '2022-10-28 19:16:12', '2022-10-28 19:16:12');
+	(1, 'Emanuel Correa', 'https://scontent.fcpq12-1.fna.fbcdn.net/v/t39.30808-6/284190286_101194969285832_2170665384713493301_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGUCERhcI6U1t-5Afjuj7Mi25bQELu0IfbbltAQu7Qh9kmNpJX1U7bosKxlN0gNTGAeAhQ1xhZNmpAoIUnuM8TN&_nc_ohc=4H-hQizI6FwAX8Ix1Mf&_nc_pt=1&_nc_zt=23&_nc_ht=scontent.fcpq12-1.fna&oh=00_AfC0O1x3k2Ntm3lIZSshtMh3xucZ6u-Rhc1s2w1DoxvnVQ&oe=637A3740', 'emanuel@gmail.com', '123', '2022-10-28 19:16:12', '2022-10-28 19:16:12');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 
 -- Copiando estrutura para trigger vidaleve.pacientes_BEFORE_INSERT

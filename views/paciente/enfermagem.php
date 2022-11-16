@@ -12,7 +12,6 @@ if (count($_POST)) {
 }
 ?>
 
-
 <main class="anamnese-geral general">
     <div class="container">
         <?php require_once(__DIR__ . '/../aside.php'); ?>
@@ -31,7 +30,7 @@ if (count($_POST)) {
             <form id="anamnese-geral" action="?<?= $_SERVER['QUERY_STRING'] ?>" method="POST" class="forms">
                 <section class="information">
                     <fieldset>
-                        <h3>Dados pessoais / Anamnese Geral</h3>
+                        <h3>Dados pessoais / Enfermagem</h3>
                         <div class="input-forms">
                             <div class="input-group">
                                 <label for="estado_civil">Digite o estado civil:</label>
@@ -274,7 +273,7 @@ if (count($_POST)) {
                                 <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
                             </div>
                             <div class="input-group">
-                                <label for="religiao">Sono e Repouso: Em média quantas horas de sono por dia?:</label>
+                                <label for="religiao">Uso de próteses:</label>
                                 <input type="text" name="religiao" id="religiao" placeholder="Digite sua resposta...">
                             </div>
                             <div class="input-group">

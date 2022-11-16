@@ -21,9 +21,9 @@ $newsData = $news->fetchAll();
             </form>
 
             <div class="news-list">
-            <h1>Lista de noticias</h1>
+            <h1 style="margin: 0 auto">Lista de noticias</h1>
 
-            <table>
+            <table style="width: 689.75px;">
                 <thead>
                 <tr>
                     <th></th>
