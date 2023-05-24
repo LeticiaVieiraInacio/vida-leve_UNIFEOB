@@ -3,7 +3,7 @@ use Model\User;
 
 $user = new User();
 
-echo json_encode($_POST);
+echo 'TESTE';
 
 if (isset($_POST['email']) && isset($_POST['password'])) {  
     $email = $_POST['email'];
@@ -13,4 +13,3 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     echo json_encode($response);
 }
-?> 
