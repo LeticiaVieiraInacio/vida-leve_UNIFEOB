@@ -8,7 +8,7 @@ class Database {
     
     public function __construct()
     {
-        $conn = new PDO('mysql:host=localhost;dbname=vidaleve', 'root', 'root');
+        $conn = new PDO('mysql:host=localhost;dbname=vidaleve', 'root', '');
 
         $this->conn = $conn;
     }
