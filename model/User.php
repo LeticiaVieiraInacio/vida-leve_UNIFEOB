@@ -56,6 +56,7 @@ class User extends Database
                 return Response::error(null, Exception::WRONG_PASSWORD);
             }
         } catch (\PDOException $exception) {
+            http_response_code(500);
             return Response::error();
         }
     }

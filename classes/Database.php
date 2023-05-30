@@ -2,13 +2,20 @@
 namespace Classes;
 
 use PDO;
+use PDOException;
 
 class Database {
     protected $conn, $stmt, $sql;
     
     public function __construct()
     {
-        $conn = new PDO('mysql:host=localhost;dbname=vidaleve', 'root', 'root');
+        try {
+            $conn = new PDO('mysql:host=localhost;dbname=vidaleve', 'root', '');
+        } catch (PDOException $ex) {
+            http_response_code(502);
+            
+            throw $ex;
+        }
 
         $this->conn = $conn;
     }
