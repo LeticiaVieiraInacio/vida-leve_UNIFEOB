@@ -22,7 +22,7 @@ class Response
     
     public static function error($data = null, $code = null)
     {
-        http_response_code(500);
+        http_response_code(200);
         
         return [
             'status' => Response::ERROR,

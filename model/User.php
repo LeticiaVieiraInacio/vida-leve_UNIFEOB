@@ -37,8 +37,6 @@ class User extends Database
     public function login($email, $password)
     {
         if (!$this->verifyEmail($email)) {
-            header('HTTP/1.1 500 Internal Server Error');
-
             return Response::error(null, Exception::USER_NOT_FOUND);
         }
         
@@ -55,8 +53,6 @@ class User extends Database
                 
                 return Response::success($response);
             } else {
-                header('HTTP/1.1 500 Internal Server Error');
-                
                 return Response::error(null, Exception::WRONG_PASSWORD);
             }
         } catch (\PDOException $exception) {
@@ -67,8 +63,6 @@ class User extends Database
     public function create($email, $password, $name)
     {
         if ($this->verifyEmail($email)) {
-            header('HTTP/1.1 500 Internal Server Error');
-
             return Response::error(null, Exception::EMAIL_ALREADY_IN_USE);
         }
         
@@ -87,8 +81,6 @@ class User extends Database
                 
                 return Response::success($response);
             } else {
-                header('HTTP/1.1 500 Internal Server Error');
-                
                 return Response::error();
             }
             
@@ -116,8 +108,6 @@ class User extends Database
     public function forgotPassword($email, $code)
     {
         if (!$this->verifyEmail($email)) {
-            header('HTTP/1.1 500 Internal Server Error');
-
             return Response::error(null, Exception::USER_NOT_FOUND);
         }
         
