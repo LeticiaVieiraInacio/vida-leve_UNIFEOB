@@ -10,7 +10,7 @@ class HelpGPT extends Database
     public function ask($context)
     {
         $prompt = $this->makePromp($context);
-        $OPENAI_API_KEY = "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";
+        $OPENAI_API_KEY = "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";
 
         try {
             $ch = curl_init();

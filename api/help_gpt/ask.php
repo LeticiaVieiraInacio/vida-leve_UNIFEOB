@@ -9,9 +9,9 @@ header('Content-Type: application/x-www-form-urlencoded');
 
 if (isset($_POST['context'])) {  
     $context = json_decode($_POST['context'], true);
-    $newContext = [
-        'data' => $context
-    ];
+    // $newContext = [
+    //     'data' => $context
+    // ];
 
     $response = $help->ask($context);
 

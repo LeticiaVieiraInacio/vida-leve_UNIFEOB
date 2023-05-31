@@ -10,7 +10,7 @@ class Database {
     public function __construct()
     {
         try {
-            $conn = new PDO('mysql:host=localhost;dbname=vidaleve', 'root', '');
+            $conn = new PDO('mysql:host=localhost;dbname=vidaleve', 'root', 'root');
         } catch (PDOException $ex) {
             http_response_code(502);
             
